@@ -1,0 +1,114 @@
+:root{
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+/* Neutral*/
+
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+/*GLobals*/
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+body{
+    font-size: 16px;/* 1 rem = 10 px*/
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem auto;
+    width: 90%;
+}
+@media (min-width: 768px) {
+    .card{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 60%;
+        margin-top: 10rem;
+    }
+}
+.button{
+    background-color: var(--very-light-gray);
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 3rem;
+    display: inline-block;
+    border: 0.2rem solid transparent;
+}
+.button:hover{
+    border: 0.2rem solid var(--very-light-gray);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/*Columns and designs*/
+.container{
+    padding: 2.5rem;
+}
+.container svg{
+    margin-top: 1.5rem;
+}
+.container h2{
+    font-family: 'Big Shoulders Display', cursive;
+    margin-bottom: 1rem;
+    color: var(--very-light-gray);
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+}
+.container p{
+    color: var(--transparent-white);
+    flex-direction: column;
+    padding-bottom: 1rem;
+    margin-bottom: 6rem;
+    line-height: 2.5rem;
+}
+.bg-orange{
+    background-color: var(--bright-orange);
+    border-radius: .7rem .7rem 0rem 0;
+}
+.bg-orange .button{
+    color: var(--bright-orange);
+}
+.bg-cyan{
+    background-color: var(--dark-cyan);
+}
+.bg-cyan .button{
+    color: var(--dark-cyan);
+}
+.bg-dark-cyan{
+    background-color: var(--very-dark-cyan);
+    border-radius: 0 0rem .7rem .7rem;
+}
+.bg-dark-cyan .button{
+    color: var(--very-dark-cyan);
+}
+
+@media (min-width: 768px) {
+    .bg-orange{
+        border-radius: .7rem 0 0 .7rem;
+
+    }
+    .bg-dark-cyan{
+        border-radius: 0 .7rem .7rem 0;
+    }   
+}
+
+/*States*/
+.bg-orange .button:hover, .bg-dark-cyan .button:hover, .bg-cyan .button:hover{
+    color: var(--very-light-gray);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
