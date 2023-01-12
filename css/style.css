@@ -25,9 +25,8 @@ body{
 .card{
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin: 5rem auto;
-    width: 90%;
+    max-width: 90%;
 }
 @media (min-width: 768px) {
     .card{
@@ -112,3 +111,16 @@ body{
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+/* Hiding class, making content visible only to screen readers but not visually */
+/* "sr" meaning "screen-reader" */
+
+.sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+  }
